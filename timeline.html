@@ -1,0 +1,252 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Mushare</title>
+        <link rel="shortcut icon" href="Images/icon.ico">
+        <link href="style.css" type="text/css" rel="stylesheet">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="jquery.js"></script>
+        <script src="jquery-ui.min.js"></script>
+        <link href="jquery-ui.min.css" type="text/css" rel="stylesheet"/>
+        <script src="script.js" type="text/javascript"></script>
+        <script src="scriptMlibrary.js" type="text/javascript"></script>
+        
+        <script>
+            $(document).ready(function(){
+        $(document).on('click','#Mprofile_img',function(){
+            $('#Mlibrarya').toggle();
+        });
+        $(document).on('click','.close_Mlibrary',function(){
+            $('#Mlibrarya').toggle();
+        });
+    });
+        </script>
+        
+        
+        <style>   
+            #upload_boxe{
+                margin-left: 30%;
+            }
+            #upload_box_left{
+                margin-left: 15%;                
+            }
+        </style>
+        
+        <style>
+/* The Modal (background) */
+.modala {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modala-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 50%;
+    overflow: auto;
+        height:70%;
+}
+
+/* The Close Button */
+.close_Mlibrary {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close_Mlibrary:hover,
+.close_Mlibrary:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+    background:grey;
+}
+    #form{
+        
+    }
+</style>
+        
+    </head>
+    <body>
+        <div style="background:rgb(255, 102, 102);position:fixed;margin-top:0px;width:100%;">
+            <div id="heading">Mushare</div>
+            <div id="navigation">
+                <a style="margin-left:50px;" href="index.html" > Home </a>
+                <a href="timeline.html" id="active" > Timeline </a>
+                <a href="#" > Dart board </a>
+                <a href="#" > Send Dart </a>
+                <input type="text" name="searchbox" id="searchbox" placeholder="search mushare"/>
+                <a style="margin-left:400px;"><img height=20px name="notifications_icon" id="notification_button" title="Notification" width=20px src="Images/NOTI_N-MINI.png"/></a>
+                <a style="margin-left:10px;"><img height=20px name="chat_icon" id="chat_button" title="Chat" width=20px src="Images/CHAT_C-MINI.png"/></a>
+                <a style="margin-left:10px;"><img height=20px name="favorites_icon" id="favorites_button" width=20px title="Favorites" alt="favorites" src="Images/FABV_F_MII.png"/></a>
+            </div>
+        </div>
+        
+        <div id="left-sidebar">
+            <div id="usersinfo">
+                <img src="Images/68.jpg" alt="User's Profile Pic"><b>USER'S NAME</b>
+
+            </div>
+             <ul>
+                 <li class="mainlist"><a href="#">Your groups</a></li>
+                 <ul>
+                     <li class="underlist"><a>group1</a></li>
+                     <li class="underlist"><a>group2</a></li>
+                     <li class="underlist"><a>group3</a></li>
+                </ul>
+                <li class="mainlist"><a href="#">Page Invites</a></li>
+                 <ul>
+                     <li class="underlist"> page1</li>
+                     <li class="underlist"> page2</li>
+                     <li class="underlist"> page3</li>
+                 </ul>
+                <li class="mainlist"><a href="#">You may like</a></li>
+            </ul>
+            <br/><br/><br/><br/><br/>
+    </div>
+        
+        <div id="main-content">
+            <div class="pro_pic">
+                <a href="Images/68.jpg"><img src="Images/68.jpg"title="Profile pic" name="profile"></a>
+            </div>
+            <div id="mtonearea">
+                <div id="upload_storey">
+                <div id="upload_boxe">
+                    <a >Select your MTone</a>
+                </div>
+                
+                <div id="upload_box">
+                    <div id="upload_box_left">
+                        Want to say something about..<input class="input_caption" type="text" name="cation";><input class="input_button"type="button" name="upload_song" value="Save"><input class="input_button" type="button" name="tag_song" value="Tag">
+                    </div>
+                    <div id="upload_box_mid">
+                        <div class="upload_option_1">Upload your song</div>
+                        <div class="upload_option_2">Choose from Mlibrary</div>
+                    </div>
+                    <div id="upload_box_right">
+                        <div id="uploading"><input type="file" name="file" id="file" /><span id="uploaded_file"></span></div>You have selected MTone to:
+                    </div>
+                </div>
+            </div>
+                
+                <div id="Mlibrary">
+                <div id="myModal" class="modal">
+
+                      <!-- Modal content -->
+                      <div class="modal-content">
+                        <span class="close">&times;</span>
+                        <h2>M Library</h2>
+
+                                        <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names.." title="Type in a name">
+
+                                        <ul id="myUL">
+                                          <li><a href="#" class="header">A</a></li>
+                                          <li><a href="#">Adele</a></li>
+                                          <li><a href="#">Agnes</a></li>
+
+                                          <li><a href="#" class="header">B</a></li>
+                                          <li><a href="#">Billy</a></li>
+                                          <li><a href="#">Bob</a></li>
+
+                                          <li><a href="#" class="header">C</a></li>
+                                          <li><a href="#">Calvin</a></li>
+                                          <li><a href="#">Christina</a></li>
+                                          <li><a href="#">Cindy</a></li>
+                                        </ul>
+                      </div>
+
+                    </div>
+            </div>
+            </div>
+            
+            <div id="Mprofile">
+                <img  id="Mprofile_img" title="Mprofile" src="Images/login_background.jpg">
+                <button style="margin-left:200px;">Friends</button>
+                <button>Club</button>
+                
+                <div id="Mlibrarya" class="modala">
+
+  <!-- Modal content -->
+  <div class="modala-content">
+    <span class="close_Mlibrary">&times;</span>
+        <h2>M Profile</h2>
+                
+      <div id="form">
+            Name:&nbsp;&nbsp;User Name<br/><br/>
+            DOB         :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;20/02/2002<br/><br/>
+            E mail    :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;somebody@somemail.com<br><br/>
+            Phone no.  :&nbsp;&nbsp;&nbsp;9876543201<br><br/>     
+            <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+            <a class="button" href="#">Edit</a>
+                
+                
+                
+    </div>
+  </div>
+
+</div>
+                
+            </div>
+            <hr/>
+            
+            <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+        </div>
+        
+        <div id="right-sidebar">
+            <div id="notifications">
+                <h2>Notification Page</h2>
+            </div>
+            
+            <div id="chat">
+                <h2>chat Page</h2>
+            </div>
+            
+            <div id="favorites">
+                <h2 style="text-align:center;">My Favorites</h2>
+                <div style="text-align:center;"><input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for song.." title="Type in a name"></div>
+                <ul id="myUL">
+                    <li><a href="#">music1</a></li>
+                    <li><a href="#">music2</a></li>
+                    <li><a href="#">music3</a></li>
+                    <li><a href="#">music4</a></li>
+                    <li><a href="#">music6</a></li>
+                    <li><a href="#">music7</a></li>
+                    <li><a href="#">music8</a></li>
+                </ul>
+
+                <script>
+                    function myFunction() {
+                        var input, filter, ul, li, a, i;
+                        input = document.getElementById("myInput");
+                        filter = input.value.toUpperCase();
+                        ul = document.getElementById("myUL");
+                        li = ul.getElementsByTagName("li");
+                        for (i = 0; i < li.length; i++) {
+                            a = li[i].getElementsByTagName("a")[0];
+                            if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
+                                li[i].style.display = "";
+                            } else {
+                                li[i].style.display = "none";
+
+                            }
+                        }
+                    }
+                </script>
+            </div>
+            
+        </div>
+    </body>
+</html>

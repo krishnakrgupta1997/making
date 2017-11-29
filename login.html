@@ -1,0 +1,67 @@
+<!doctype html>
+<html>
+    <head>
+        <title>LOGIN-Musapp</title>
+        <style>
+            body{
+                background-image: url("login_background2.jpg");
+                background-size: cover;
+            }
+            h1{
+                text-align:center;
+                font-size: 60px;
+                font-family: verdana;
+                color:dodgerblue;
+            }
+            .container{
+                width:500px;
+                height:400px;
+                text-align: center;
+                background-color:red;
+                border-radius:10px;
+                margin:0 auto;
+                margin-top:50px;
+                box-shadow:1px 5px 10px 2px rgba(30, 30, 31, 0.82);
+            }
+            input{
+                height:45px;
+                width:300px;
+                font-size:18px;
+                margin-top:30px;
+                background-color:ghostwhite;
+                padding-left: 30px;
+            }
+            #submit{
+                width:80px;
+                height:25px;
+                font-size: 14px;
+                padding-left: 9px;
+            }
+            a{
+                font-size:18px;
+                text-decoration:none;
+                color:darkblue;
+                padding:15px;
+                text-align: right;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Mushare</h1>
+        <div class="container">
+            <form action="login.php">
+                <a  href="signup.html" >New user</a>
+                <div class="form-input">
+                    <input type="text" name="username" placeholder="Enter Username" required>
+                </div>
+                <div class="form-input">
+                    <input type="password" name="password" placeholder="Enter Password" required>
+                </div>
+                <input id="submit"type="submit" name="login" value="LOGIN">
+                
+                <br/><br/><br/>
+                <a href="forgot_pass.html">Forgot Password</a>
+            </form>
+        </div>
+    </body>
+</html>
